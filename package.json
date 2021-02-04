@@ -1,0 +1,28 @@
+{
+  "name": "hiccup-catcher",
+  "version": "1.0.12",
+  "main": "dist/index.js",
+  "author": "Sergei Shulepov <s.pepyakin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "yarn build && node dist/index.js"
+  },
+  "dependencies": {
+    "@polkadot/api": "^3.0.1",
+    "@polkadot/util": "^5.0.1",
+    "@polkadot/util-crypto": "^5.0.1",
+    "chalk": "^4.1.0",
+    "filter-console": "^0.1.1",
+    "yargs": "^15.4.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5"
+  }
+}
