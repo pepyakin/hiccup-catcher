@@ -61,7 +61,7 @@ function displayHiccups(blockNumber, hiccups) {
 
 	hiccups.forEach((hiccup) => {
 		console.log(
-`  Id(${hiccup.paraId}): ${chalk.red(hiccup.trigger.eventName)} while last event was ${chalk.green(hiccup.last.eventName)} at ${hiccup.last.blockNumber}`
+`  Id(${hiccup.paraId}): ${chalk.red(hiccup.trigger.eventName)} while last event was ${chalk.green(hiccup.last.eventName)} at ${hiccup.last.blockNumber} (${hiccup.trigger.blockNumber - hiccup.last.blockNumber} blocks stall)`
 		)
 	})
 }
