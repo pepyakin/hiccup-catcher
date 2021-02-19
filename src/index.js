@@ -113,7 +113,8 @@ async function main() {
 		let nextFinalizedHeader = await waitForNewFinalized(api, lastFinalized)
 		console.log(`Chain is at block: #${nextFinalizedHeader.number}`)
 
-		for (let blockNumber = lastFinalized; blockNumber < nextFinalizedHeader.number + 1; blockNumber++) {
+		// We iterate until the penultimate block otherwise `getBlockHash` fails with decoding error.
+		for (let blockNumber = lastFinalized; blockNumber < nextFinalizedHeader.number; blockNumber++) {
 			const blockHash = await api.rpc.chain.getBlockHash(blockNumber)
 			const events = await api.query.system.events.at(blockHash)
 
