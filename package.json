@@ -19,6 +19,9 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "hiccup-catcher": "dist/index.js"
+  },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
     "@babel/core": "^7.11.5",

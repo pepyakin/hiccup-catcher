@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 import { ApiPromise, WsProvider } from '@polkadot/api'
 import { cryptoWaitReady } from '@polkadot/util-crypto'
 import chalk from 'chalk'
